@@ -1,0 +1,104 @@
+
+.chakra-ui-light{
+  background:#FFE5CC;
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+}
+
+.tabs{
+ position: relative; right: 40px;top: 40px;
+
+}
+
+.contenido{
+  position: relative; left: 20px;top: 20px;
+}
+
+.show{
+ position: relative; left: 190px;top: 30px; 
+}
+
+.flex{
+  display: flex;
+  position: relative;top: 60px;right: 20px;
+}
+
+.center{
+  position: relative; top: 40px;left: 50px;
+}
+
+.botones{
+  position: relative; left: 180px;top: 40px;
+  
+}
+
+.botonAgregar{
+  position: relative; left: 100px;top: 40px;
+
+}
+
+.botonBuscar{
+  position: relative; left: 160px;top: 40px;
+}
+
+
+.edad{
+  position: relative; left: 30px;bottom: 8px;
+  width: 100px;
+  
+ 
+}
+
+
+.lista{
+  margin-left:65px;
+}
+
+.input{
+  margin-left:30px;
+  
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
