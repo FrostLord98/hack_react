@@ -249,11 +249,11 @@ export default function Usuarios() {
                     <TabPanel>
                         <FormControl className="actualizar">
                             <br /><br /> 
-                            <FormLabel >Nombre</FormLabel>
-                            <Input  value={nombresAlias} borderColor={"black"}  className="input" onChange={handlerInputNombre} required ={true} placeholder="Nombre" htmlSize={50} width='auto'  errorBorderColor='black'/>
+                            <FormLabel for = "name">Ingresar nombre existente para actualizar el correo en el campo siguiente</FormLabel>
+                            <Input  value={nombresAlias} id="name" borderColor={"black"}  className="input" onChange={handlerInputNombre} required  placeholder="Ingresar nombre" htmlSize={50} width='auto'  errorBorderColor='black'/>
                             <br /><br />
-                            <FormLabel >Correo</FormLabel>
-                            <Input  value={correosAlias} borderColor={"black"}  className="input" onChange={handlerInputCorreo} required placeholder="Correo" htmlSize={50} width='auto'  errorBorderColor='black'/>
+                            <FormLabel for = "email">Ingresar correo existente para actualizar el nombre en el campo anterior</FormLabel>
+                            <Input  value={correosAlias}  id="email" borderColor={"black"}  className="input" onChange={handlerInputCorreo} required placeholder="Ingresar correo" htmlSize={50} width='auto'  errorBorderColor='black'/>
                             <br /><br /> 
                 
 
