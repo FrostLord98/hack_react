@@ -130,6 +130,9 @@ export default function Usuarios() {
             return alert("El correo ya existe")
         }
         agregarUsuario(nombresAlias, correosAlias, edadesAlias)
+        setCorreosUsuarios([...correosUsuarios, correosAlias])
+        setEdadesUsuarios([...edadesUsuarios, edadesAlias])
+        setNombresUsuarios([...nombresUsuarios, nombresAlias])
         return alert("Usuario agregado")
     }
 
@@ -155,6 +158,16 @@ export default function Usuarios() {
 
             eliminarUsuario(nombresAlias)
 
+            nombresUsuarios.splice(posicion, 1); // 2nd parameter means remove one item only
+            setNombresUsuarios([...nombresUsuarios]);
+
+            correosUsuarios.splice(posicion, 1); // 2nd parameter means remove one item only
+            setCorreosUsuarios([...correosUsuarios]);
+
+            edadesUsuarios.splice(posicion, 1); // 2nd parameter means remove one item only
+            setEdadesUsuarios([...edadesUsuarios]);
+
+
             return alert("Usuario eliminado")
         }
     }
@@ -168,12 +181,20 @@ export default function Usuarios() {
             if (correosUsuarios.includes(correosAlias)) {
                 return alert("El correo ya existe")
             }
+            const posicion = nombresUsuarios.indexOf(nombresAlias);
+
+            correosUsuarios[posicion] = correosAlias
+            setCorreosUsuarios([...correosUsuarios]);
+
             cambiarCorreo(correosAlias, nombresAlias)
         }
         else if (correosUsuarios.includes(correosAlias)) {
             if (nombresUsuarios.includes(nombresAlias)) {
                 return alert("El usuario ya existe")
             }
+            const posicion = correosUsuarios.indexOf(correosAlias);
+            nombresUsuarios[posicion] = nombresAlias
+            setNombresUsuarios([...nombresUsuarios]);
             cambiarNombre(correosAlias, nombresAlias)
         }   
 
