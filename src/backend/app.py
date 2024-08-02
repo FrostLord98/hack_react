@@ -9,8 +9,8 @@ CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 load_dotenv('C:/Users/frost/Desktop/ultimo hack js/app/src/backend/.env')
 
-app.config["AWS_ACCESS_KEY"] = getenv("AWS_ACCESS_KEY")
-app.config["AWS_SECRET_KEY"] = getenv("AWS_SECRET_KEY")
+app.config["AWS_ACCESS_KEY_ID"] = getenv("AWS_ACCESS_KEY_ID")
+app.config["AWS_SECRET_KEY_ID"] = getenv("AWS_SECRET_KEY_ID")
 
 
 def connect_to_db():
