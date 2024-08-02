@@ -23,8 +23,10 @@ def connect_to_db():
     return conn
 
 
-
-
+@app.route("/")
+def hello():
+    return "hello world"
+    
 @app.route("/nombres")
 def get_nombres():
     nombres = []
