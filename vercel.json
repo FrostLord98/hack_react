@@ -1,15 +1,9 @@
 {
   "version": 2,
   "builds": [
-    {
-      "src": ".flaskenv",
-      "use": "@vercel/node"
-    }
+    { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": ".flaskenv"
-    }
+    { "src": "src/backend", "dest": "/app.py" }
   ]
 }
