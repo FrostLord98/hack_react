@@ -1,11 +1,12 @@
 from flask import Flask,request
 from dotenv import load_dotenv
-from flask_cors import CORS
+from flask_cors import CORS,cross_origin
 from os import getenv
 from psycopg import connect
 
 app = Flask(__name__)
 CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 load_dotenv('C:/Users/frost/Desktop/ultimo hack js/app/src/backend/.env')
 
 app.config["AWS_ACCESS_KEY"] = getenv("AWS_ACCESS_KEY")
@@ -23,10 +24,7 @@ def connect_to_db():
     return conn
 
 
-@app.route("/")
-def hello():
-    return "hello world"
-    
+@cross_origin(allow_headers=['Content-Type'])    
 @app.route("/nombres")
 def get_nombres():
     nombres = []
@@ -39,6 +37,8 @@ def get_nombres():
         nombres.append(i[0])
 
     return nombres
+
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/correos")
 def get_correos():
     correos = []
@@ -51,6 +51,8 @@ def get_correos():
         correos.append(i[0])
 
     return correos
+
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/edades")
 def get_edades():
     edades = []
@@ -64,6 +66,7 @@ def get_edades():
 
     return edades
 
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/agregar",methods=["POST"])
 def agregar_usuario():
     edad = request.form['edad']
@@ -77,6 +80,7 @@ def agregar_usuario():
     connection.close()
     return 201
 
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/borrar",methods=["put"])
 def borrar_usuario():
     nombre = request.form['nombre']
@@ -88,6 +92,7 @@ def borrar_usuario():
     connection.close()
     return 200
 
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/modificarCorreo",methods=["put"])
 def modificar_correo():
     nombre = request.form['nombre']
@@ -100,6 +105,7 @@ def modificar_correo():
     connection.close()
     return 200
 
+@cross_origin(allow_headers=['Content-Type'])
 @app.route("/modificarNombre",methods=["put"])
 def modificar_nombre():
     nombre = request.form['nombre']
