@@ -23,6 +23,12 @@ def connect_to_db():
     )
     return conn
 
+@cross_origin(allow_headers=['Content-Type'])   
+@app.route("/hola")
+def hello():
+    return "hola"
+    
+
 
 @cross_origin(allow_headers=['Content-Type'])    
 @app.route("/nombres")
